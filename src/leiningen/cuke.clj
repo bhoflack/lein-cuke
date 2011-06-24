@@ -1,13 +1,12 @@
 (ns leiningen.cuke
-  (:use  [clojure.contrib.str-utils2 :only (join)]
-         [leiningen.compile :only [eval-in-project]]))
-
+  (:use [clojure.contrib.str-utils2 :only (join)]
+        [leiningen.compile :only [eval-in-project]]))
 
 (defn jruby
   [options]
   (.run (org.jruby.Main.
          (doto (new org.jruby.RubyInstanceConfig)
-           (.setEnvironment {"GEM_PATH" "lib/gems"})))
+           (.setEnvironment {"GEM_PATH" ".gems"})))
         (.split options " ")))
 
 (defn cuke
@@ -15,9 +14,10 @@
   [project & args]
   (eval-in-project
    project
-   `(.run (org.jruby.Main.
-           (doto (new org.jruby.RubyInstanceConfig)
-             (.setEnvironment {"GEM_PATH" "lib/gems"})))
-          (into-array (map str ["lib/gems/bin/cucumber" ~@args])))
+   `(do (.run (org.jruby.Main.
+               (doto (new org.jruby.RubyInstanceConfig)
+                 (.setEnvironment {"GEM_PATH" ".gems"})))
+              (into-array (map str [".gems/bin/cucumber" ~@args])))
+        (System/exit 0))
    (fn [java]
      (.setFork java false))))

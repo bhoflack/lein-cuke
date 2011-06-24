@@ -4,4 +4,4 @@
 (defn cuke-gems
   "Install the Ruby Gems that are necessary to run Cucumber."
   [project]
-  (jruby "-S gem install -i lib/gems --no-rdoc --no-ri cucumber"))
+  (jruby "-S gem install -i .gems --no-rdoc --no-ri cucumber cuke4duke"))
