@@ -17,7 +17,5 @@
    `(do (.run (org.jruby.Main.
                (doto (new org.jruby.RubyInstanceConfig)
                  (.setEnvironment {"GEM_PATH" ".gems"})))
-              (into-array (map str [".gems/bin/cucumber" ~@args])))
-        (System/exit 0))
-   (fn [java]
-     (.setFork java false))))
+              (into-array (map str [".gems/bin/cucumber" "-c" ~@args])))
+        (System/exit 0))))

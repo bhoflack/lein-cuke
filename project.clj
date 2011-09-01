@@ -1,4 +1,4 @@
-(defproject org.clojars.rferraz/lein-cuke "1.1.0"
+(defproject org.clojars.rferraz/lein-cuke "1.1.1"
   :description "Cucumber runner for leiningen"
   :repositories {"cukes" "http://cukes.info/maven"
                  "clojars" "http://clojars.org/repo"}
