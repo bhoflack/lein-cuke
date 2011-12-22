@@ -1,4 +1,4 @@
-(defproject org.clojars.ptillemans/lein-cuke "1.1.1"
+(defproject org.clojars.ptillemans/lein-cuke "1.1.2-SNAPSHOT"
   :description "Cucumber runner for leiningen"
   :repositories {"cukes" "http://cukes.info/maven"}
   :dependencies [[org.clojure/clojure "1.2.1"]
