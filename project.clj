@@ -1,4 +1,4 @@
-(defproject lein-cuke "0.0.4-SNAPSHOT"
+(defproject org.clojars.ptillemans/lein-cuke "0.0.4-SNAPSHOT"
   :description "Cucumber runner for leiningen"
 ;  :repositories {"cukes" "http://cukes.info/maven"
 ;                 "clojars" "http://clojars.org/repo"}
@@ -9,5 +9,6 @@
                   :exclusions [org.jruby/jruby-complete
                                org.clojure/clojure
                                org.clojure/clojure-contrib]]]
-  :dev-dependencies [[lein-clojars "0.7.0"]])
+  :dev-dependencies [[org.jruby/jruby-complete "1.6.5"]
+                     [lein-clojars "0.7.0"]])
 

@@ -18,6 +18,6 @@
    `(.run (org.jruby.Main.
            (doto (new org.jruby.RubyInstanceConfig)
              (.setEnvironment {"GEM_PATH" "lib/gems"})))
-          (into-array (map str ["lib/gems/bin/cucumber" ~@args])))
+          (into-array (map str ["lib/gems/bin/cuke4duke" ~@args])))
    (fn [java]
      (.setFork java false))))
