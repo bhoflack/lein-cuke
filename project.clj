@@ -1,4 +1,4 @@
-(defproject org.clojars.ptillemans/lein-cuke "0.0.4-SNAPSHOT"
+(defproject org.clojars.ptillemans/lein-cuke "0.0.4"
   :description "Cucumber runner for leiningen"
 ;  :repositories {"cukes" "http://cukes.info/maven"
 ;                 "clojars" "http://clojars.org/repo"}
