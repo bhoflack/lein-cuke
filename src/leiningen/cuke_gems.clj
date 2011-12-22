@@ -1,7 +1,7 @@
 (ns leiningen.cuke-gems
-  (:use [leiningen.cuke :only [jruby gem-path]]))
+  (:use [leiningen.cuke :only [jruby]]))
 
 (defn cuke-gems
-  "Install the Ruby Gems that are necessary to run Cucumber."
-  [project & args]
-  (jruby (str "-S gem install -i " gem-path "--no-rdoc --no-ri" ~@args "cucumber cuke4duke"))
+  "Run cucumber features"
+  [project]
+  (jruby "-S gem install -i lib/gems --no-rdoc --no-ri cucumber"))

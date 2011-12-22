@@ -1,13 +1,1 @@
-Version 0.4.3-SNAPSHOT (Started October 27, 2010)
--------------------------------------------------
-Upgraded to Cucumber cuke4duke 0.4.3-SNAPSHOT (this solves a lot of dependency issues).
-
-
-Version 0.3.2 (September 27, 2010)
-----------------------------------
-Upgraded to Cucumber cuke4duke 0.3.2 and Clojure 1.2.0.
-
-
-Version 0.0.1 (April 1, 2010)
------------------------------
 External facing changes for lein-cuke
