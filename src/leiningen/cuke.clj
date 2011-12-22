@@ -14,8 +14,9 @@
   [project & args]
   (eval-in-project
    project
-   `(do (.run (org.jruby.Main.
-               (doto (new org.jruby.RubyInstanceConfig)
-                 (.setEnvironment {"GEM_PATH" ".gems"})))
-              (into-array (map str [".gems/bin/cucumber" "-c" ~@args])))
-        (System/exit 0))))
+   `(.run (org.jruby.Main.
+           (doto (new org.jruby.RubyInstanceConfig)
+             (.setEnvironment {"GEM_PATH" "lib/gems"})))
+          (into-array (map str [".gems/bin/cucumber" ~@args])))
+   (fn [java]
+     (.setFork java false))))
