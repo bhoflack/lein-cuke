@@ -23,3 +23,13 @@ Do this:
     $ lein cuke-gems # install needed gems
     $ # create cucumber hierarchy - todo: add a target for this
     $ lein cuke # start red-green-refactoring!
+
+
+## Notes
+
+You can add additional argument to lein cuke-gems. These arguments are inserted on the gem command line between the options and the gem specification.
+
+One usage is to specify the proxy host:
+
+     lein cuke-gems -p http://proxy:3128/
+

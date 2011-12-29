@@ -1,4 +1,4 @@
-(defproject org.clojars.ptillemans/lein-cuke "0.0.4"
+(defproject org.clojars.ptillemans/lein-cuke "0.0.5"
   :description "Cucumber runner for leiningen"
 ;  :repositories {"cukes" "http://cukes.info/maven"
 ;                 "clojars" "http://clojars.org/repo"}
@@ -10,5 +10,6 @@
                                org.clojure/clojure
                                org.clojure/clojure-contrib]]]
   :dev-dependencies [[org.jruby/jruby-complete "1.6.5"]
+                     [org.clojure/clojure-contrib "1.2.0"]
                      [lein-clojars "0.7.0"]])
 
