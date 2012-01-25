@@ -1,6 +1,5 @@
 (require 'leiningen.core
-         ['clojure.contrib.str-utils2 :as 'str]
-         ['clojure.contrib.shell-out :as 'shell])
+         ['clojure.java.shell :as 'shell])
 
 
 (def output (atom ""))
@@ -15,4 +14,4 @@
                (apply shell/sh (.split %1 " "))))
 
 (Then #"^I should see \"(.*)\" in the output"
-      #(assert (str/contains? @output %1)))
+      #(assert (contains? @output %1)))

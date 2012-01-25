@@ -1,5 +1,5 @@
 (ns leiningen.cuke
-  (:use [clojure.contrib.str-utils2 :only (join)]
+  (:use [clojure.string :only (join)]
         [leiningen.compile :only [eval-in-project]]))
 
 (defn jruby
