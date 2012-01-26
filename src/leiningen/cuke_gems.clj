@@ -4,7 +4,7 @@
 (defn cuke-gems
   "Run cucumber features"
   [project & args]
-  (let [base "-S gem install -i lib/gems --no-rdoc --no-ri"
+  (let [base "-S gem install -i gems --no-rdoc --no-ri"
         cucumber "--version 1.1.2 cucumber"
         cuke4duke"--version 0.4.4 cuke4duke"
         extra (apply str (map #(str " " %) `[~@args]))
