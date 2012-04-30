@@ -1,6 +1,6 @@
 (ns leiningen.cuke
-  (:use  [clojure.contrib.str-utils2 :only (join)]
-         [leiningen.compile :only [eval-in-project]]))
+  (:use [clojure.string :only (join)]
+        [leiningen.compile :only [eval-in-project]]))
 
 
 (defn jruby
@@ -15,9 +15,9 @@
   [project & args]
   (eval-in-project
    project
-   `(.run (org.jruby.Main.
-           (doto (new org.jruby.RubyInstanceConfig)
-             (.setEnvironment {"GEM_PATH" "gems"})))
-          (into-array (map str ["gems/bin/cuke4duke" ~@args])))
-   (fn [java]
-     (.setFork java false))))
+   `(do
+      (.run (org.jruby.Main.
+             (doto (new org.jruby.RubyInstanceConfig)
+               (.setEnvironment {"GEM_PATH" "gems"})))
+            (into-array (map str ["gems/bin/cuke4duke" ~@args])))
+      (System/exit 0))))
